@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
+
+
+
+	<script src="./js/main.js" defer></script>
+	<title>Signup Form</title>
+</head>
+<body>
+
+	<main>
+		<div class="left">
+			<div>
+				<img src="./odin-lined.png" alt="" srcset="">
+				<h1>ODIN</h1>
+			</div>
+			
+
+		</div>
+
+		<div class="right">
+			<div class="top">
+				<p>Ahoy, future subjects of Odin! If you still haven't realized your deepest dreams even after giving your best, maybe it's not your fault. Maybe it's the planet you were born on. This is where you can <span>Sign up</span> for an Asgardian citizenship.<br><br>You <span>know</span> you want this.</p>
+			</div>
+
+			<div class="middle">
+				<div>Let's get this started!</div>
+
+				<form id="form" action="#" method="get">
+
+					<!-- NAME -->
+					<div class="wrapper">
+						<div>
+							<label class="required" for="firstName">FIRST NAME</label>
+							<div>
+								<input class="valid-check" type="text" name="user_firstName" id="firstName" required minlength="3" maxlength="12" pattern="[a-zA-Z]+" >
+								<span class="error-icon"></span>
+								
+							</div>
+							
+						</div>
+						<div>
+							<label for="lastName">LAST NAME</label>
+							<input type="text" name="user_lastName" id="lastName" >
+							
+						</div>
+						
+					</div>
+
+
+					<!-- EMAIL/PHONE -->
+					<div class="wrapper">	
+						<div>
+							<label class="required" for="email">EMAIL</label>	
+							<div>
+								<input class="valid-check" type="email" name="user_email" id="email" required  >
+								<span class="error-icon"></span>
+							</div>
+							<div class="error"></div>
+						</div>
+						<div>
+							<label class="required" for="contactNumber">PHONE NUMBER</label>
+							<div>
+								<input class="valid-check" type="tel" name="user_phone" id="contactNumber"  required pattern="^[0-9]+$" minlength="7" maxlength="12" >
+								<span class="error-icon"></span>
+							</div>
+							
+						</div>
+					</div>
+
+
+					<!-- PASSWORD -->
+					<div class="wrapper">
+						<div>
+							<label class="required" for="password">PASSWORD</label>
+							<div>
+								<input class="valid-check"  type="password" name="user_password" id="password"  required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+								>
+								<span class="error-icon"></span>
+							</div>
+							
+						</div>
+						<div>
+							<label class="required" for="confirmPassword">CONFIRM PASSWORD</label>
+							<input  type="password" name="user_passwordConfirm" id="confirmPassword" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+							>
+						</div>
+						
+					</div>
+
+					<!-- AGE GRP -->
+					<div class="wrapper">
+						<fieldset>
+							<legend>AGE GROUP</legend>
+							<div>
+								<input type="radio" name="ageGroup" id="0-18" value="0-18">
+								<label for="0-18">under 18</label>
+							</div>
+
+							<div>
+								<input type="radio" name="ageGroup" id="19-30" value="19-30" checked>
+								<label for="19-30"> 19 - 30</label>
+							</div>
+
+							<div>
+								<input type="radio" name="ageGroup" id="31-60" value="31 - 60">
+								<label for="31-60">31 - 60</label>
+							</div>
+
+							<div>
+								<input type="radio" name="ageGroup" id="above61" value="above 61">
+								<label for="above61">above 61</label>
+							</div>
+						</fieldset>
+					</div>
+
+					<!-- GENDER -->
+					<div class="wrapper select">
+						<div>
+							<label for="gender">GENDER</label>
+							<select name="user_gender" id="gender">
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+						
+					</div>
+					
+				</form>
+			</div>
+
+			<div class="bottom">
+				<button id="btn" form="form" >Create Account</button>
+				 <span>Already have an account? <a href="#">Log in</a></span>
+				 
+			</div>
+		</div>
+	</main>
+	
+</body>
+</html>
