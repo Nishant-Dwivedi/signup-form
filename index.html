@@ -28,7 +28,7 @@
 
 		<div class="right">
 			<div class="top">
-				<p>Ahoy, future subjects of Odin! If you still haven't realized your deepest dreams even after giving your best, maybe it's not your fault. Maybe it's the planet you were born on. This is where you can <span>Sign up</span> for an Asgardian citizenship.<br><br>You <span>know</span> you want this.</p>
+				<p>Ahoy, future subjects of Odin! If you still haven't realized your deepest dreams even after giving your best, maybe it's not your fault. Maybe it's the planet you were born on. This is where you can <span>Sign up</span> for Asgardian citizenship.<br><br>You <span>know</span> you want this.</p>
 			</div>
 
 			<div class="middle">
@@ -49,7 +49,7 @@
 						</div>
 						<div>
 							<label for="lastName">LAST NAME</label>
-							<input type="text" name="user_lastName" id="lastName" >
+							<div><input type="text" name="user_lastName" id="lastName" ></div>
 							
 						</div>
 						
@@ -90,8 +90,10 @@
 						</div>
 						<div>
 							<label class="required" for="confirmPassword">CONFIRM PASSWORD</label>
-							<input  type="password" name="user_passwordConfirm" id="confirmPassword" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
-							>
+							<div>
+								<input  type="password" name="user_passwordConfirm" id="confirmPassword" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+								>
+							</div>
 						</div>
 						
 					</div>

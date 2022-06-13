@@ -133,11 +133,11 @@ input:focus {
 
 .error-icon {
     content: "";
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     position: absolute;
-    right: 2%;
-    top: 12%;
+    right: 3%;
+    top: 14%;
     visibility: visible;
 
 }
@@ -147,7 +147,7 @@ input:valid+.error-icon {
 }
 
 input:focus:invalid+.error-icon {
-    content: url(../exclamation-mark.png);
+    content: url(../danger.png);
 }
 
 
@@ -192,6 +192,7 @@ label {
 .wrapper>div {
     display: flex;
     flex-direction: column;
+    
 }
 
 .wrapper>div:nth-child(1) {
@@ -219,13 +220,12 @@ label {
 
 
 
-
 select {
     border: 1px solid #E5E7EB;
     border-radius: 3px;
     background: #f9fafb;
     padding: .35rem;
-    width: 190px;
+    min-width: 190px;
     outline: none;
 }
 
@@ -317,10 +317,27 @@ select:focus {
 
 @media screen and (max-width: 460px) {
 
+    
+
     main {
         flex-direction: column;
     }
+    
+    select   {
+        text-align: center;
+    }
 
+    .wrapper > div {
+        margin-right: 0;
+        width: 100%;
+        align-items: stretch;
+    }
+    .wrapper > div > div {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
     .left {
         padding: 4rem 0;
     }
